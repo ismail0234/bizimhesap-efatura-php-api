@@ -133,3 +133,63 @@ $efatura->setCustomerTaxNo("Vergi No veya TC No");
 
 
 ```
+
+### Fatura Ödeme Bilgileri
+
+```php
+
+/**
+ *
+ * @description Ödeme Para Birimi
+ * @note Zorunlu
+ * @string 
+ *
+ */
+$efatura->setAmountCurrency('TL');
+
+/**
+ *
+ * @description Ödeme Brüt Tutarı
+ * @note  Zorunlu
+ * @double
+ *
+ */
+$efatura->setAmountGross(2400.00); 
+
+/**
+ *
+ * @description Ödeme İndirim Tutarı
+ * @note Zorunlu
+ * @double 
+ *
+ */
+$efatura->setAmountDiscount(0.00);
+
+/**
+ *
+ * @description Ödeme Net Tutarı
+ * @note Zorunlu
+ * @double 
+ *
+ */
+$efatura->setAmountNet(2400.00);
+
+/**
+ *
+ * @description Ödeme KDV Tutarı
+ * @note Zorunlu
+ * @double 
+ *
+ */
+$efatura->setAmountTax(432.00);
+
+/**
+ *
+ * @description Ödeme Toplam Son Tutar
+ * @note Zorunlu
+ * @double 
+ *
+ */
+$efatura->setAmountTotal(2832.00);
+
+```
