@@ -63,3 +63,73 @@ $efatura->setDeliveryDate(time());
 
 
 ```
+
+### Müşteri Bilgileri
+
+```php
+
+/**
+ *
+ * @description Müşteri ID
+ * @note Zorunlu
+ * @integer
+ *
+ */	
+$efatura->setCustomerId(10001);
+
+/**
+ *
+ * @description Müşteri Tam Adı
+ * @note Zorunlu
+ * @string 
+ *
+ */
+$efatura->setCustomerFullName("İsmail Satilmiş");
+
+/**
+ *
+ * @description Müşteri Email Adresi
+ * @note İsteğe Bağlı
+ * @string 
+ *
+ */
+$efatura->setCustomerEmail("ismaiil_0234@hotmail.com");
+
+/**
+ *
+ * @description Müşteri Telefon Numarası
+ * @note İsteğe Bağlı
+ * @string 
+ *
+ */
+$efatura->setCustomerPhone("05320000001");
+ 
+/**
+ *
+ * @description Müşteri Adresi
+ * @note Zorunlu
+ * @string 
+ *
+ */ 
+$efatura->setCustomerAddress("Örnek Mah. Deneme sok No1/2 İstanbul");
+
+/**
+ *
+ * @description Müşteri Vergi Dairesi
+ * @note İsteğe Bağlı
+ * @string 
+ *
+ */
+$efatura->setCustomerTaxOffice("Vergi Dairesi");
+
+/**
+ *
+ * @description Müşteri Vergi Numarası veya T.C Numarası
+ * @note İsteğe Bağlı
+ * @string 
+ *
+ */
+$efatura->setCustomerTaxNo("Vergi No veya TC No");
+
+
+```
