@@ -217,13 +217,13 @@ $product = array(
   // Ürün Brüt Fiyatı
   "gross"    => 2,400.00,
   // Ürün İndirim Tutarı
-  "discount" => "0.00",
+  "discount" => 0.00,
   // Ürün Net Tutar
-  "net"      => "2,400.00",
+  "net"      => 2400.00,
   // Ürün KDV Tutarı
-  "tax"      => "432.00",
+  "tax"      => 432.00,
   // Ürün Toplam Tutar
-  "total"    => "2,400.00"
+  "total"    => 2400.00
 );
 
 $efatura->addProduct($product);
