@@ -1,5 +1,5 @@
-# Bizimhesap PHP Api
-bizimhesap.com Php ile yazılmış efatura oluşturmak için basit bir api
+# Bizimhesap Efatura PHP Api
+bizimhesap.com Efatura Php ile yazılmış efatura oluşturmak için basit bir api
 
 ```php
 
