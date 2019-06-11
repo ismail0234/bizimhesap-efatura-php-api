@@ -215,7 +215,7 @@ $product = array(
   // Ürün fiyatı (KDVsiz)
   "price"    => 1200.00,
   // Ürün Brüt Fiyatı
-  "gross"    => 2,400.00,
+  "gross"    => 2400.00,
   // Ürün İndirim Tutarı
   "discount" => 0.00,
   // Ürün Net Tutar
