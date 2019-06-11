@@ -192,4 +192,40 @@ $efatura->setAmountTax(432.00);
  */
 $efatura->setAmountTotal(2832.00);
 
+
+```
+
+### Ürün Ekleme
+
+```php
+
+$product = array(
+  // Ürünün ID Numarası
+  "Id"       => 13372,
+  // Ürünün Adı
+  "name"     => "deneme ürünü",
+  // Ürün ile ilgili Notlar
+  "note"     => "36 beden",
+  // Ürün Barkod Numarası
+  "barcode"  => "8690123456789",
+  // Ürün KDV Oranı
+  "taxrate"  => 18.00,
+  // Ürün satın alınan adet
+  "count"    => 2,
+  // Ürün fiyatı (KDVsiz)
+  "price"    => 1200.00,
+  // Ürün Brüt Fiyatı
+  "gross"    => 2,400.00,
+  // Ürün İndirim Tutarı
+  "discount" => "0.00",
+  // Ürün Net Tutar
+  "net"      => "2,400.00",
+  // Ürün KDV Tutarı
+  "tax"      => "432.00",
+  // Ürün Toplam Tutar
+  "total"    => "2,400.00"
+);
+
+$efatura->addProduct($product);
+
 ```
