@@ -65,11 +65,11 @@ $efatura->addProduct(array(
 	"taxrate"  => 18.00,
 	"count"    => 2,
 	"price"    => 1200.00,
-	"gross"    => 2,400.00,
+	"gross"    => 2400.00,
 	"discount" => 0.00,
-	"net"      => 2,400.00,
+	"net"      => 2400.00,
 	"tax"      => 432.00,
-	"total"    => 2,832.00
+	"total"    => 2832.00
 ));
 
 /**
