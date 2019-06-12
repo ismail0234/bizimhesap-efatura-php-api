@@ -41,16 +41,27 @@ Class EFatura
 	/**
 	 *
 	 * @description EFatura ana bilgilerin ayarlandığı bölüm
-	 * @note 
-	 * @string Firma ID
-
+	 * 
 	 */
-	public function __construct($firmId)
+	public function __construct()
 	{
 		
 		$this->clearInformations();
 
-		$this->informations["firmId"] = $firmId;
+	}
+
+	/**
+	 *
+	 * @description Firma ID numarası
+	 * @note Zorunlu
+	 * @string
+	 *
+	 */
+	public function setFirmId($data)
+	{
+
+		$this->informations["firmId"] = $data;
+
 
 	}
 
