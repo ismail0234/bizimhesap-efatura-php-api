@@ -244,7 +244,7 @@ $efatura->addProduct($product);
 
 require "BizimHesap/EFatura.php";
 
-$efatura = new EFatura("");
+$efatura = new EFatura();
 
 /**
  *
