@@ -2,7 +2,16 @@
 
 include "BizimHesap/EFatura.php";
 
-$efatura = new EFatura("Firma Idniz");
+$efatura = new EFatura();
+
+/**
+ *
+ * @description Firma ID numaranız
+ * @note Zorunlu
+ * @string 
+ *
+ */
+$efatura->setFirmId( "485E114528794BE590B5F72403398765" ); 
 
 /**
  *
