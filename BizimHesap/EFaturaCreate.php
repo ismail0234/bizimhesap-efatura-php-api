@@ -84,6 +84,8 @@ Class EFaturaCreate extends HttpRequest
 	public function run()
 	{
 
+		$this->check();
+		
 		return $this->sendRequest($this->invoiceUrl, array(
 			'data' => $this->informations
 		));
