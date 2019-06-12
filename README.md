@@ -5,8 +5,16 @@ bizimhesap.com Efatura Php ile yazılmış efatura oluşturmak için basit bir a
 
 require "BizimHesap/EFatura.php";
 
-/* Firma ID numaranız - Zorunlu */
-$efatura = new EFatura("485E114528794BE590B5F72403398765");
+$efatura = new EFatura();
+
+/**
+ *
+ * @description Firma ID numaranız
+ * @note Zorunlu
+ * @string 
+ *
+ */
+$efatura->setFirmId( "485E114528794BE590B5F72403398765" ); 
 
 
 ```
@@ -236,8 +244,14 @@ $efatura->addProduct($product);
 
 require "BizimHesap/EFatura.php";
 
-/* Firma ID numaranız - Zorunlu */
-$efatura = new EFatura("485E114528794BE590B5F72403398765");
+$efatura = new EFatura("");
+
+/**
+ *
+ * Firma ID numaranız
+ *
+ */
+$efatura->seFirmId("485E114528794BE590B5F72403398765");
 
 /**
  *
