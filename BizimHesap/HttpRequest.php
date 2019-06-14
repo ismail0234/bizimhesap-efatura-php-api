@@ -24,10 +24,19 @@ Class HttpRequest
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 		curl_setopt($ch, CURLOPT_HEADER, false);
   
-		$response = curl_exec($ch);
+		$response = trim(curl_exec($ch));
 		curl_close($ch);
 
-		return json_decode($response, true);
+		if (empty($response)) {
+			return array('error' => true, 'msg' => 'Boş Response Content');
+		}
+
+		$response = json_decode($response, true);
+		if (!empty($response['error'])) {
+			return array('error' => true, 'msg' => $response['error']);
+		}
+
+		return array('error' => false , 'data' => $response);
 	}
 
 }
