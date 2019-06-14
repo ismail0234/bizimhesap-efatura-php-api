@@ -80,10 +80,10 @@ $efatura->setDeliveryDate(time());
  *
  * @description Müşteri ID
  * @note Zorunlu
- * @integer
+ * @string
  *
  */	
-$efatura->setCustomerId(10001);
+$efatura->setCustomerId("10001");
 
 /**
  *
