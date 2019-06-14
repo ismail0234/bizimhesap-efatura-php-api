@@ -2,7 +2,7 @@
 bizimhesap.com Efatura Php ile yazılmış efatura oluşturmak için basit bir api
 
 ## Notlar
-Bu repo için katkıda bulunmak isterseniz [Bu Linkten](https://github.com/ismail0234/bizimhesap-efatura-php-api/issues) katkılarınızı paylaşabilirsiniz. Eğer hata, bug ve sorun gibi işlemlerinizi ise yine aynı bölümden yapabilirsiniz.
+Bu repo için katkıda bulunmak isterseniz [Bu Linkten](https://github.com/ismail0234/bizimhesap-efatura-php-api/issues) katkılarınızı paylaşabilirsiniz. Hata, bug ve sorun gibi işlemlerinizi ise yine aynı bölümden yapabilirsiniz.
 
 ### Kullanım
 
