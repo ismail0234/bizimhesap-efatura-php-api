@@ -32,6 +32,10 @@ Class HttpRequest
 		}
 
 		$response = json_decode($response, true);
+		if (isset($response['Message']) && !empty($response['Message'])) {
+			return array('error' => true, 'msg' => $response['Message']);
+		}
+
 		if (!empty($response['error'])) {
 			return array('error' => true, 'msg' => $response['error']);
 		}
