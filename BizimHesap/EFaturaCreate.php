@@ -38,7 +38,7 @@ Class EFaturaCreate extends HttpRequest
 			return array("error" => true, "msg" => "Lütfen dueDate alanını boş bırakmayın.");
 		}		
 
-		if (!isset($this->informations['customer']['customerId']) || $this->informations['customer']['customerId'] <= 0) {
+		if (!isset($this->informations['customer']['customerId']) || empty($this->informations['customer']['customerId'])) {
 			return array("error" => true, "msg" => "Lütfen Müşteri ID alanını boş bırakmayın.");
 		}			
 
@@ -85,7 +85,7 @@ Class EFaturaCreate extends HttpRequest
 	public function run()
 	{
 
-		$check = $this->check();
+		$check = $this->check(); 
 		if ($check['error']) {
 			return $check;
 		}
