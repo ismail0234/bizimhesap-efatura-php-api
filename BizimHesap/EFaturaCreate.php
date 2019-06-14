@@ -23,57 +23,58 @@ Class EFaturaCreate extends HttpRequest
 	{	
 
 		if (!isset($this->informations['firmId']) || empty($this->informations['firmId'])) {
-			throw new Exception("Lütfen Firma ID alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Firma ID alanını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['invoiceType']) || empty($this->informations['invoiceType'])) {
-			throw new Exception("Lütfen invoiceType alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen invoiceType alanını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['dates']['invoiceDate']) || empty($this->informations['dates']['invoiceDate'])) {
-			throw new Exception("Lütfen invoiceDate alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen invoiceDate alanını boş bırakmayın.");
 		}	
 
-		if (!isset($this->informations['dates']['deliveryDate']) || empty($this->informations['dates']['deliveryDate'])) {
-			throw new Exception("Lütfen deliveryDate alanını boş bırakmayın.");
+		if (!isset($this->informations['dates']['dueDate']) || empty($this->informations['dates']['dueDate'])) {
+			return array("error" => true, "msg" => "Lütfen dueDate alanını boş bırakmayın.");
 		}		
 
 		if (!isset($this->informations['customer']['customerId']) || $this->informations['customer']['customerId'] <= 0) {
-			throw new Exception("Lütfen Müşteri ID alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Müşteri ID alanını boş bırakmayın.");
 		}			
 
 		if (!isset($this->informations['customer']['title']) || empty($this->informations['customer']['title'])) {
-			throw new Exception("Lütfen Müşteri Adını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Müşteri Adını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['customer']['address']) || empty($this->informations['customer']['address'])) {
-			throw new Exception("Lütfen Müşteri Adresini boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Müşteri Adresini boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['amounts']['currency']) || empty($this->informations['amounts']['currency'])) {
-			throw new Exception("Lütfen Para birimini boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Para birimini boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['amounts']['gross'])) {
-			throw new Exception("Lütfen Brüt alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Brüt alanını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['amounts']['discount'])) {
-			throw new Exception("Lütfen İndirim alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen İndirim alanını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['amounts']['net'])) {
-			throw new Exception("Lütfen Net Tutar alanını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Net Tutar alanını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['amounts']['tax'])) {
-			throw new Exception("Lütfen KDV Tutarını boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen KDV Tutarını boş bırakmayın.");
 		}
 
 		if (!isset($this->informations['amounts']['total'])) {
-			throw new Exception("Lütfen Toplam Tutarı boş bırakmayın.");
+			return array("error" => true, "msg" => "Lütfen Toplam Tutarı boş bırakmayın.");
 		}
 
+		return array("error" => false);
 	}
 
 	/**
@@ -84,7 +85,10 @@ Class EFaturaCreate extends HttpRequest
 	public function run()
 	{
 
-		$this->check();
+		$check = $this->check();
+		if ($check['error']) {
+			return $check;
+		}
 
 		return $this->sendRequest($this->invoiceUrl, array(
 			'data' => $this->informations
