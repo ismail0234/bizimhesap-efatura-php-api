@@ -286,7 +286,7 @@ $efatura->setDeliveryDate(time());
  * Müşteri Bilgileri
  *
  */
-$efatura->setCustomerId(10001);
+$efatura->setCustomerId("10001");
 $efatura->setCustomerFullName("İsmail Satilmiş");
 $efatura->setCustomerEmail("ismaiil_0234@hotmail.com");
 $efatura->setCustomerPhone("05320000001");
