@@ -327,25 +327,16 @@ $efatura->addProduct(array(
  *
  */
 
-try {
-	
-	$response = $efatura->sendInvoice();
-	if ($response['error']) {
-		echo 'Başarısız: ' . $response['error'];
-	}else{
+$response = $efatura->sendInvoice();
+if ($response['error']) {
+	echo 'Başarısız: ' . $response['error'];
+}else{
 
-		echo 'Başarılı';
-		echo "<pre>";
-		print_r( $response );
-		echo "</pre>";
-		exit;
-
-	}
-
-} catch (Exception $e) {
-	
-	echo "Başarısız:<br><br>";
-	echo $e->getMessage();
+	echo 'Başarılı';
+	echo "<pre>";
+	print_r( $response );
+	echo "</pre>";
+	exit;
 
 }
 
