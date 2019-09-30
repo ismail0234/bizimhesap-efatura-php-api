@@ -118,14 +118,14 @@ Class EFatura
 	public function setInvoiceDate($date)
 	{
 
-		$this->informations["dates"]["invoiceDate"] = date('c', $date);
+		$this->informations["dates"]["invoiceDate"] = date('Y-m-d\TH:i:s', $date);
 
 	}
 
 	public function setDueDate($date)
 	{
 
-		$this->informations["dates"]["dueDate"] = date('c', $date);
+		$this->informations["dates"]["dueDate"] = date('Y-m-d\TH:i:s', $date);
 
 	}
 
@@ -139,7 +139,7 @@ Class EFatura
 	public function setDeliveryDate($date)
 	{
 
-		$this->informations["dates"]["deliveryDate"] = date('c', $date);
+		$this->informations["dates"]["deliveryDate"] = date('Y-m-d\TH:i:s', $date);
 
 	}
 
