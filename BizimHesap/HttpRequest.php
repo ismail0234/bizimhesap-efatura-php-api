@@ -21,6 +21,7 @@ Class HttpRequest
 		}
 
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+		curl_setopt($ch, CURLOPT_TIMEOUT , 30);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 		curl_setopt($ch, CURLOPT_HEADER, false);
   
