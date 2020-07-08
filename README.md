@@ -3,7 +3,7 @@ bizimhesap.com Efatura Php ile yazılmış efatura oluşturmak için basit bir a
 
 ## Bağış Yapın
 
-Yaptığım işlerden memnun iseniz, daha iyi ve daha iş çıkartmam için beni destekleyebilirsiniz;
+Yaptığım işlerden memnun iseniz, daha iyi ve daha çok iş çıkartmam için beni destekleyebilirsiniz;
 
 * 10 TL Bağış => https://shipy.link/y/E92jtcP1
 * 20 TL Bağış => https://shipy.link/y/SWCJ5bFO
