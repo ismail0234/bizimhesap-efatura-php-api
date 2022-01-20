@@ -97,7 +97,7 @@ $efatura->setCustomerId("10001");
  * @string 
  *
  */
-$efatura->setCustomerFullName("İsmail Satilmiş");
+$efatura->setCustomerFullName("İsmail");
 
 /**
  *
